@@ -108,8 +108,8 @@ class LinkedList:
 class LinkedListApp:
     def __init__(self, master):
         self.master = master
-        self.canvas = tk.Canvas(master, width=850, height=400)
-        self.canvas.config(bg=color1)
+        self.master.title('Linked List')
+        self.canvas = tk.Canvas(master, width=855, height=400, bg=color1, highlightbackground=color1)
         self.canvas.pack()
         
         self.linked_list = LinkedList()
