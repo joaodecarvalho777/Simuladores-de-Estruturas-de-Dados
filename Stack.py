@@ -7,7 +7,7 @@ remover o último inserido (pop) e visualizar o elemento no topo (peek). A inter
 e um Canvas para representar visualmente os elementos da pilha. Caixas de diálogo fornecem feedback e interação para
 entrada de valores. Ideal para aprendizado de estruturas de dados básicas de forma interativa e visualmente intuitiva.
 
-Este código implementa uma aplicação de pilhas utilizando Tkinter para a interface gráfica.
+Este código implementa uma aplicação de pilha utilizando Tkinter para a interface gráfica.
 """
 import tkinter as tk
 from tkinter import simpledialog, messagebox
@@ -40,7 +40,7 @@ class Stack:
 class StackApp:
     def __init__(self, master):
         self.master = master
-        self.master.title("Operações de pilha")
+        self.master.title("Stack")
         self.canvas = tk.Canvas(master, width=200, height=300, bg=color1, highlightbackground=color1)
         self.canvas.pack()
 
