@@ -51,7 +51,7 @@ class BinaryTree:
 
     def _delete(self, root, key):
         if root is None:
-            return root, False  # Adicionar retorno de indicador de falha
+            return root, False
 
         if key < root.val:
             root.left, deleted = self._delete(root.left, key)
@@ -189,7 +189,7 @@ class BinaryTreeApp:
                 self.tree.delete(value)
                 self.draw_tree()
             except ValueError as e:
-                messagebox.showerror("Error", str(e))
+                messagebox.showerror("Erro", str(e))
 
 
     def search(self):
