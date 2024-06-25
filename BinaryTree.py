@@ -38,11 +38,12 @@ class BinaryTree:
                 node.left = TreeNode(key)
             else:
                 self._insert(node.left, key)
-        else:
+        elif key > node.val:  # Permitir valores apenas se forem diferentes
             if node.right is None:
                 node.right = TreeNode(key)
             else:
                 self._insert(node.right, key)
+        # Se o valor for igual, não fazer nada (evitar duplicados)
 
     def delete(self, key):
         self.root, deleted = self._delete(self.root, key)
@@ -190,7 +191,6 @@ class BinaryTreeApp:
                 self.draw_tree()
             except ValueError as e:
                 messagebox.showerror("Erro", str(e))
-
 
     def search(self):
         value = self.get_value_from_user()
